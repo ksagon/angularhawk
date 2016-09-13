@@ -1,0 +1,7 @@
+angularhawk.iml
+dist/
+node_modules/
+npm-debug.log
+npm-debug.log.1460797795
+typings/
+vendor/

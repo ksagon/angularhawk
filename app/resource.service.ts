@@ -51,8 +51,6 @@ export class ResourceService {
   }
 
   private toResourceStories(response: any): Story[] {
-    console.log('Resource Stories: ' + response.json());
-
     var stories = response.json() as Story[];
 
     return stories;

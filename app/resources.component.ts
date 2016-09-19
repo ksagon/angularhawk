@@ -28,8 +28,8 @@ export class ResourceComponent implements OnInit {
     this.resourceService.getResources().then(pagedResources => this.pagedResources = pagedResources);
   }
 
-  gotoResourceStories(resource: Resource): void {
-    let link = ['/resources', resource.modelId, 'stories'];
+  gotoResourceStories(resourceId: string): void {
+    let link = ['/resources', resourceId, 'stories'];
     this.router.navigate(link);
   }
 }

@@ -17,11 +17,15 @@ export class ResourceStoryComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.params.forEach((params: Params) => {
-      let resourceId = +params['resourceId'];
-      this.resourceService.getResourceStories(resourceId.toString())
+      this.route.params.forEach((params: Params) => {
+          let resourceId = params['resourceId'];
+          this.getResourceStories(resourceId);
+      });
+  }
+
+  private getResourceStories(resourceId: string): void {
+    this.resourceService.getResourceStories(resourceId)
         .then(stories => this.stories = stories);
-    });
   }
 
   goBack(): void {

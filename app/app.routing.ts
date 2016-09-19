@@ -21,7 +21,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'resources/:resourceId/stories',
-    component: ResourceStoryComponent
+    component: ResourceStoryComponent,
   }
 ];
 

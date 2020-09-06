@@ -28,6 +28,14 @@ export class ResourceService {
       .catch(this.handleError);
   }
 
+  getResource(resourceId: string): Promise<Resource> {
+    const url = `${this.resourcesUrl}/${resourceId}`;
+    return this.http.get(url)
+        .toPromise()
+        .then(response => this.toResource(response))
+        .catch(this.handleError);
+  }
+
   getResourceStories(resourceId: string): Promise<Story[]> {
     const url = `${this.resourcesUrl}/${resourceId}/stories`;
     return this.http.get(url)
@@ -48,6 +56,12 @@ export class ResourceService {
     pagedResources.page = response.json().page as Page;
 
     return pagedResources;
+  }
+
+  private toResource(response: any): Resource {
+    var resource = response.json() as Resource;
+
+    return resource;
   }
 
   private toResourceStories(response: any): Story[] {

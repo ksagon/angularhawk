@@ -10,12 +10,16 @@
       <tr>
         <th>Name</th>
         <th>Title</th>
+        <th>Dev Days</th>
+        <th>QA Days</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let story of stories">
         <td>{{story.name}}</td>
         <td>{{story.title}}</td>
+        <td>{{story.devDays | number:'1.2-2'}}</td>
+        <td>{{story.qaDays | number:'1.2-2'}}</td>
       </tr>
     </tbody>
   </table>

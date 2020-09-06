@@ -1,6 +1,6 @@
 "use strict";
 var Page = (function () {
-    function Page() {
+    function Page(size, totalElements, totalPages, number) {
     }
     return Page;
 }());

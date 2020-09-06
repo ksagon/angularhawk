@@ -2,6 +2,7 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ResourceComponent }      from './resources.component';
+import { ResourceDetailComponent }      from './resource-detail.component';
 import { TeamComponent }      from './teams.component';
 import {ResourceStoryComponent} from "./resource-stories.component";
 
@@ -22,6 +23,10 @@ const appRoutes: Routes = [
   {
     path: 'resources/:resourceId/stories',
     component: ResourceStoryComponent,
+  },
+  {
+    path: 'resources/:resourceId',
+    component: ResourceDetailComponent,
   }
 ];
 

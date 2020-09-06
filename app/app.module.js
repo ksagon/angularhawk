@@ -12,8 +12,10 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
+/*import { DatePicker } from 'ng2-datepicker/ng2-datepicker';*/
 var app_component_1 = require('./app.component');
 var resource_service_1 = require('./resource.service');
+var resource_detail_component_1 = require('./resource-detail.component');
 var resources_component_1 = require('./resources.component');
 var resource_stories_component_1 = require('./resource-stories.component');
 var team_service_1 = require('./team.service');
@@ -27,12 +29,15 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
+                forms_1.ReactiveFormsModule,
                 http_1.HttpModule,
                 app_routing_1.routing
             ],
             declarations: [
                 app_component_1.AppComponent,
+                /*DatePicker,*/
                 resources_component_1.ResourceComponent,
+                resource_detail_component_1.ResourceDetailComponent,
                 resource_stories_component_1.ResourceStoryComponent,
                 teams_component_1.TeamComponent
             ],

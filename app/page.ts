@@ -1,6 +1,7 @@
 export class Page {
-  size: number;
-  totalElements: number;
-  totalPages: number;
-  number: number;
+  constructor(
+    size: number,
+    totalElements: number,
+    totalPages: number,
+    number: number ) {}
 }

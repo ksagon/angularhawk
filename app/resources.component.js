@@ -23,8 +23,12 @@ var ResourceComponent = (function () {
         var _this = this;
         this.resourceService.getResources().then(function (pagedResources) { return _this.pagedResources = pagedResources; });
     };
-    ResourceComponent.prototype.gotoResourceStories = function (resource) {
-        var link = ['/resources', resource.modelId, 'stories'];
+    ResourceComponent.prototype.gotoResource = function (resourceId) {
+        var link = ['/resources', resourceId];
+        this.router.navigate(link);
+    };
+    ResourceComponent.prototype.gotoResourceStories = function (resourceId) {
+        var link = ['/resources', resourceId, 'stories'];
         this.router.navigate(link);
     };
     ResourceComponent = __decorate([

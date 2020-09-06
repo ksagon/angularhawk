@@ -24,6 +24,8 @@
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       'angular2-datatable': 'npm:angular2-datatable',
       'lodash': 'npm:lodash/lodash.js',
+      'moment': 'npm:moment/moment.js',
+      'ng2-datepicker': 'npm:ng2-datepicker',
 
       // other libraries
       'rxjs':                       'npm:rxjs',
@@ -36,6 +38,12 @@
         defaultExtension: 'js'
       },
       'angular2-datatable': {
+        defaultExtension: 'js'
+      },
+      'moment': {
+        defaultExtension: 'js'
+      },
+      'ng2-datepicker': {
         defaultExtension: 'js'
       },
       rxjs: {

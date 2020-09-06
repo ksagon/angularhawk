@@ -1,6 +1,7 @@
 "use strict";
 var router_1 = require('@angular/router');
 var resources_component_1 = require('./resources.component');
+var resource_detail_component_1 = require('./resource-detail.component');
 var teams_component_1 = require('./teams.component');
 var resource_stories_component_1 = require("./resource-stories.component");
 var appRoutes = [
@@ -19,7 +20,11 @@ var appRoutes = [
     },
     {
         path: 'resources/:resourceId/stories',
-        component: resource_stories_component_1.ResourceStoryComponent
+        component: resource_stories_component_1.ResourceStoryComponent,
+    },
+    {
+        path: 'resources/:resourceId',
+        component: resource_detail_component_1.ResourceDetailComponent,
     }
 ];
 exports.routing = router_1.RouterModule.forRoot(appRoutes);

@@ -14,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let resource of pagedResources.content" (click)="gotoResourceStories(resource.modelId)">
+      <tr *ngFor="let resource of pagedResources.content" (click)="gotoResource(resource.modelId)">
         <td>{{resource.name}}</td>
         <td>{{resource.start}}</td>
         <td>{{resource.end}}</td>

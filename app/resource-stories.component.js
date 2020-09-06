@@ -19,10 +19,14 @@ var ResourceStoryComponent = (function () {
     ResourceStoryComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.params.forEach(function (params) {
-            var resourceId = +params['resourceId'];
-            _this.resourceService.getResourceStories(resourceId.toString())
-                .then(function (stories) { return _this.stories = stories; });
+            var resourceId = params['resourceId'];
+            _this.getResourceStories(resourceId);
         });
+    };
+    ResourceStoryComponent.prototype.getResourceStories = function (resourceId) {
+        var _this = this;
+        this.resourceService.getResourceStories(resourceId)
+            .then(function (stories) { return _this.stories = stories; });
     };
     ResourceStoryComponent.prototype.goBack = function () {
         window.history.back();

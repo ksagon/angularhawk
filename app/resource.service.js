@@ -29,6 +29,14 @@ var ResourceService = (function () {
             .then(function (response) { return _this.toResources(response); })
             .catch(this.handleError);
     };
+    ResourceService.prototype.getResource = function (resourceId) {
+        var _this = this;
+        var url = this.resourcesUrl + "/" + resourceId;
+        return this.http.get(url)
+            .toPromise()
+            .then(function (response) { return _this.toResource(response); })
+            .catch(this.handleError);
+    };
     ResourceService.prototype.getResourceStories = function (resourceId) {
         var _this = this;
         var url = this.resourcesUrl + "/" + resourceId + "/stories";
@@ -48,8 +56,11 @@ var ResourceService = (function () {
         pagedResources.page = response.json().page;
         return pagedResources;
     };
+    ResourceService.prototype.toResource = function (response) {
+        var resource = response.json();
+        return resource;
+    };
     ResourceService.prototype.toResourceStories = function (response) {
-        console.log('Resource Stories: ' + response.json());
         var stories = response.json();
         return stories;
     };
